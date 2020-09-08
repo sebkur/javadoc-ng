@@ -29,3 +29,11 @@ or Glassfish.
 
 On the frontend side, it uses a [Bootstrap 4](https://github.com/twbs/bootstrap)
 to create a nicely looking user interface.
+
+## Gains
+
+* Enable search for projects that don't have that feature enabled / still
+  use an old JDK's javadoc (pre Java 9)
+* Enable fuzzy search using ngrams, get results even with lazy typing
+* Enable source code view for projects that do not enable that in their docs
+* Code highlighting in source code view
