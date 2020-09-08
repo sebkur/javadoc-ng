@@ -27,7 +27,7 @@ generate HTML code that can be served using an embedded
 file for deployment on any standard application server such as Tomcat
 or Glassfish.
 
-On the frontend side, it uses a [Bootstrap 4](https://github.com/twbs/bootstrap)
+On the frontend side, it uses [Bootstrap 4](https://github.com/twbs/bootstrap)
 to create a nicely looking user interface.
 
 ## Gains
