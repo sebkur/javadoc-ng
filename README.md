@@ -142,8 +142,12 @@ varying sizes.
 
 ## How does it work?
 
+### Prerequisites
+
 First download
 [javadoc-ng-0.0.1.jar](https://github.com/sebkur/javadoc-ng/releases/download/v0.0.1/javadoc-ng-0.0.1.jar).
+
+### Running a web server locally from the CLI
 
 Assuming you have downloaded a [Guava source
 jar](https://repo1.maven.org/maven2/com/google/guava/guava/29.0-jre/guava-29.0-jre-sources.jar)
@@ -171,5 +175,39 @@ Even better, you can just pass a Maven coordinate to the tool and let it fetch
 the Jar artifact for you:
 
     java -jar javadoc-ng-0.0.1.jar run-server
+        --coordinates com.google.guava:guava:29.0-jre
+        --title "Guava 29.0"
+
+You can pass a `--port` argument to start the server on a different port:
+
+    java -jar javadoc-ng-0.0.1.jar run-server
+        --input /tmp/guava --title "Guava 29.0"
+        --port 9000
+
+### Building a WAR for deployment on an application server
+
+You can create a WAR archive for deployment on an application server like this:
+
+    java -jar javadoc-ng-0.0.1.jar create-war
+        --input /tmp/guava.jar --title "Guava 29.0"
+        --output /tmp/guava.war
+
+You can deploy that to your application server or just download the
+[jetty-runner](https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-runner/9.4.31.v20200723/jetty-runner-9.4.31.v20200723.jar)
+and use it to run the application like this:
+
+    java -jar /home/z/jetty/jetty-runner-9.4.31.v20200723.jar
+        /tmp/guava.war
+
+Jetty also accepts a `--port` argument, so you can start it on a different port,
+too:
+
+    java -jar /home/z/jetty/jetty-runner-9.4.31.v20200723.jar
+        --port 9000 /tmp/guava.war
+
+As with the `run-server` task, you can specify a directory or a Maven coordinate
+instead of jar file as input:
+
+    java -jar javadoc-ng-0.0.1.jar create-war
         --coordinates com.google.guava:guava:29.0-jre
         --title "Guava 29.0"
