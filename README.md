@@ -147,6 +147,8 @@ varying sizes.
 First download
 [javadoc-ng-0.0.1.jar](https://github.com/sebkur/javadoc-ng/releases/download/v0.0.1/javadoc-ng-0.0.1.jar).
 
+You'll need Java 9 or later to execute the Jar file, I have tested with Java 11.
+
 ### Running a web server locally from the CLI
 
 Assuming you have downloaded a [Guava source
