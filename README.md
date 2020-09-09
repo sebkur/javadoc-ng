@@ -26,6 +26,11 @@ for some examples there.
 If you want to try it out with your own code or a library of your choice, jump
 right to the [usage section](#how-does-it-work).
 
+![Image of Guava docs](images/guava-multiset.png)
+![Splitter source code](images/splitter-source.png)
+![Guava search](images/guava-search.png)
+![JTS Coordinate](images/jts-coordinate.png)
+
 ## What's the problem with the old javadoc?
 
 It's a bit fuzzy, but using a Javadoc site just feels like going back
