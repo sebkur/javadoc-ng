@@ -6,9 +6,86 @@ still a bit old-fashioned.
 
 Javadoc-NG is an attempt to create a modern version of javadoc, based
 on modern technology and libraries as its building blocks.
-It is intended to be easy to use (even without a JDK, a JRE should be
-sufficient), with a command line interface but it should also be
-usable as a library for build systems and other tools.
+It is intended to be easy to use and to customize and it should
+integrate seamlessly with other parts of a project's documentation.
+
+## tl;dr show me how it looks!
+
+See [Multiset](https://javadocng.mobanisto.com/guava-29.0/com/google/common/collect/Multiset.html)
+or [Splitter](https://javadocng.mobanisto.com/guava-29.0/com/google/common/base/Splitter.html)
+from Google's Guava; also see the [package
+index](https://javadocng.mobanisto.com/guava-29.0/packages.html) and also try
+the [search
+functionality](https://javadocng.mobanisto.com/guava-29.0/search?q=joiner).
+
+We've also uploaded a version of LocationTech's [JTS](https://javadocng.mobanisto.com/jts-1.17.1/),
+see [Coordinate](https://javadocng.mobanisto.com/jts-1.17.1/org/locationtech/jts/geom/Coordinate.html)
+or [KdTree](https://javadocng.mobanisto.com/jts-1.17.1/org/locationtech/jts/index/kdtree/KdTree.html)
+for some examples there.
+
+## What's the problem with the old javadoc?
+
+It's a bit fuzzy, but using a Javadoc site just feels like going back
+in time a few decades.
+For example many Javadoc deployments still use the good old frameset
+like the official [JDK8 docs](https://docs.oracle.com/javase/8/docs/api/) do.
+Starting with JDK9, the frameset [is
+gone](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html),
+but it has not been replaced with anything useful.
+It does have a search feature now, but it is not very forgiving
+concerning typos, so it's better to know precisely what you're looking for
+to get useful results. It is also sometimes broken, for example try to click any
+of the type or member search result in these
+[docs from the Error Prone project](https://errorprone.info/api/latest/#) and get
+a 404 error.
+Many libraries do not have the search feature enabled though, because
+they are written to be compatible with the still
+popular Java 8 and hence use the old JDK8's javadoc tool chain for generating
+their documentation.
+Often you find yourself clicking into the "All Classes" frame and using the
+browser's own search feature to locate a class.
+
+While many things can be criticized in terms of UI and UX, I think one
+important point is that Javadocs cannot be easily integrated seamlessly
+into a project's homepage.
+Many projects use a custom stylesheet to change some colors like the
+[Gradle docs](https://docs.gradle.org/current/javadoc/index.html) do, but 
+I have only seen a true
+integration into the navigation of the project site as a whole
+on the [Android
+documentation](https://developer.android.com/reference/java/lang/String).
+I don't know what they are doing to create that documentation, but I assume
+Google has created some internal tool for that.
+
+## Why start from scratch?
+
+While some argue that rewriting something from scratch is
+[something you should never
+do](https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/),
+there's also people who believe there are not only reasons against, but
+[also in favor](https://wiki.c2.com/?RewriteCodeFromScratch) of rewriting
+something from scratch.
+
+The javadoc tool has generally been designed with the idea in mind that others
+might want to change the output of the tool, which is why it is possible to
+implement your own
+[Doclet](https://github.com/openjdk/jdk/blob/master/src/jdk.javadoc/share/classes/jdk/javadoc/doclet/Doclet.java)
+and pass that to the tool.
+While that interface looks relatively simple, when trying to change the output
+of the Javadoc standard doclet, you'll discover that you really need to dig
+through an [internal
+package](https://github.com/openjdk/jdk/tree/master/src/jdk.javadoc/share/classes/jdk/javadoc/internal/doclets/toolkit)
+with about 99 files and 22565 lines of code that is really cumbersome
+after 25 years of evolution.
+For one the project started with the language features from Java 1.0, which has
+evolved drastically since then.
+Also, there were no libraries available to the developers at that time, to make
+their life easier except what was in the JDK itself.
+To name just one example, there was probably no HTML library available
+so the doclet comes with its own [HTML generator
+engine](https://github.com/openjdk/jdk/blob/master/src/jdk.javadoc/share/classes/jdk/javadoc/internal/doclets/formats/html/markup/HtmlTree.java).
+
+## What is the stack of javadoc-ng?
 
 On the backend side, it uses
 [JavaParser](https://github.com/javaparser/javaparser),
@@ -41,8 +118,9 @@ devices might be a corner case, but Bootstrap also provides us with a framework
 that is well-suited for building a UI that works well on desktop screens of
 varying sizes.
 
-## Gains
+## What do I gain by using javadoc-ng?
 
+* Get a modern, decent layout
 * Enable search for projects that don't have that feature enabled / still
   use an old JDK's javadoc (pre Java 9)
 * Enable fuzzy search using ngrams, get results even with lazy typing
