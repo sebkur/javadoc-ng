@@ -227,3 +227,21 @@ instead of jar file as input:
     java -jar javadoc-ng-0.0.1.jar create-war \
         --coordinates com.google.guava:guava:29.0-jre \
         --title "Guava 29.0"
+
+### Additional configuration options
+
+Both the `run-server` and the `create-war` tasks support a number of additional
+arguments. Run either command with a `--help` option to see a list of options
+and their explanation.
+
+Here's a list of options:
+
+* `--title`: the title to display in the top left corner of the navigation bar
+* `--color`: e.g. '#b93221', a color to use for the header and footer
+* `--dark`: specify this option if you're using a dar color above. It will turn
+  the color of the font used in header and footer from black to white
+* `--classic`: a base URL to use for the `Classic` link available on types to
+  link back to the original documentation. E.g. use
+  'https://guava.dev/releases/29.0-jre/api/docs/' for Guava.
+* `--external`: use this (multiple times) to specify additional JAR files to use
+  for resolving types and members of dependencies of your project or library
