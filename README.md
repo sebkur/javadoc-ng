@@ -64,6 +64,15 @@ Google has created some internal tool for that.
 Unfortunately whatever they created there is not available for others to use to
 document their own libraries.
 
+Another problem is that javadoc is not a lightweight tool – it is part of the
+JDK and relies on a lot of internal APIs. It is difficult to hack the
+documentation output, add a little extra functionality or remove unwanted
+features. Best thing you can do is parse the generated HTML and try to
+manipulate the output on that layer, which does not leed anywhere when making
+anything but trivial adjustments. When you look at HTTP APIs being documented,
+they are often integrated into the content section of project's website. Nobody
+does that with Javadocs, although in my opinion it would totally make sense.
+
 ## Why start from scratch?
 
 While some argue that rewriting something from scratch is
