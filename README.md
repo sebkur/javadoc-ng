@@ -52,13 +52,16 @@ While many things can be criticized in terms of UI and UX, I think one
 important point is that Javadocs cannot be easily integrated seamlessly
 into a project's homepage.
 Many projects use a custom stylesheet to change some colors like the
-[Gradle docs](https://docs.gradle.org/current/javadoc/index.html) do, but 
+[Gradle docs](https://docs.gradle.org/current/javadoc/index.html) do, but
+that's usually it.
 I have only seen a true
 integration into the navigation of the project site as a whole
 on the [Android
 documentation](https://developer.android.com/reference/java/lang/String).
 I don't know what they are doing to create that documentation, but I assume
 Google has created some internal tool for that.
+Unfortunately whatever they created there is not available for others to use to
+document their own libraries.
 
 ## Why start from scratch?
 
