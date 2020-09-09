@@ -23,6 +23,9 @@ see [Coordinate](https://javadocng.mobanisto.com/jts-1.17.1/org/locationtech/jts
 or [KdTree](https://javadocng.mobanisto.com/jts-1.17.1/org/locationtech/jts/index/kdtree/KdTree.html)
 for some examples there.
 
+If you want to try it out with your own code or a library of your choice, jump
+right to [usage section](#how-does-it-work).
+
 ## What's the problem with the old javadoc?
 
 It's a bit fuzzy, but using a Javadoc site just feels like going back
