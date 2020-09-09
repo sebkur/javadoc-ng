@@ -46,5 +46,10 @@ varying sizes.
 * Enable search for projects that don't have that feature enabled / still
   use an old JDK's javadoc (pre Java 9)
 * Enable fuzzy search using ngrams, get results even with lazy typing
+  (for example, search for [spitter](https://javadocng.mobanisto.com/guava-29.0/search?q=spitter)
+  in Guava and still find Splitter)
 * Enable source code view for projects that do not enable that in their docs
-* Code highlighting in source code view
+* Code highlighting in source code view (Compare
+  [classic](https://guava.dev/releases/29.0-jre/api/docs/src-html/com/google/common/base/Splitter.html)
+  to
+  [javadoc-ng](https://javadocng.mobanisto.com/guava-29.0/src-html/com/google/common/base/Splitter.html))
