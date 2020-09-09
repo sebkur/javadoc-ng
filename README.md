@@ -24,7 +24,7 @@ or [KdTree](https://javadocng.mobanisto.com/jts-1.17.1/org/locationtech/jts/inde
 for some examples there.
 
 If you want to try it out with your own code or a library of your choice, jump
-right to [usage section](#how-does-it-work).
+right to the [usage section](#how-does-it-work).
 
 ## What's the problem with the old javadoc?
 
@@ -68,10 +68,10 @@ Another problem is that javadoc is not a lightweight tool – it is part of the
 JDK and relies on a lot of internal APIs. It is difficult to hack the
 documentation output, add a little extra functionality or remove unwanted
 features. Best thing you can do is parse the generated HTML and try to
-manipulate the output on that layer, which does not leed anywhere when making
+manipulate the output on that layer, which does not lead anywhere when making
 anything but trivial adjustments. When you look at HTTP APIs being documented,
-they are often integrated into the content section of project's website. Nobody
-does that with Javadocs, although in my opinion it would totally make sense.
+they are often integrated right into the content section of a project's website.
+Nobody does that with Javadocs, although in my opinion it would totally make sense.
 
 ## Why start from scratch?
 
@@ -87,14 +87,16 @@ might want to change the output of the tool, which is why it is possible to
 implement your own
 [Doclet](https://github.com/openjdk/jdk/blob/master/src/jdk.javadoc/share/classes/jdk/javadoc/doclet/Doclet.java)
 and pass that to the tool.
-While that interface looks relatively simple, when trying to change the output
+While that interface looks relatively simple at first sight, when trying to change the output
 of the Javadoc standard doclet, you'll discover that you really need to dig
 through an [internal
 package](https://github.com/openjdk/jdk/tree/master/src/jdk.javadoc/share/classes/jdk/javadoc/internal/doclets/toolkit)
 with about 99 files and 22565 lines of code that is really cumbersome
 after 25 years of evolution.
-For one the project started with the language features from Java 1.0, which has
-evolved drastically since then.
+For one the project started with the language features from Java 1.0. The
+language has evolved drastically since then, however javadoc has not been
+refactored radically to make use of the new features that could help structure
+it better.
 Also, there were no libraries available to the developers at that time, to make
 their life easier except what was in the JDK itself.
 To name just one example, there was probably no HTML library available
