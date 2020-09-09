@@ -137,6 +137,8 @@ varying sizes.
   [classic](https://guava.dev/releases/29.0-jre/api/docs/src-html/com/google/common/base/Splitter.html)
   to
   [javadoc-ng](https://javadocng.mobanisto.com/guava-29.0/src-html/com/google/common/base/Splitter.html))
+* The development has really just begun, so you can shape the features it
+  supports and get your documentation to look the way you want it to
 
 ## How does it work?
 
