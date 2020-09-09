@@ -150,7 +150,9 @@ varying sizes.
   to
   [javadoc-ng](https://javadocng.mobanisto.com/guava-29.0/src-html/com/google/common/base/Splitter.html))
 * The development has really just begun, so you can shape the features it
-  supports and get your documentation to look the way you want it to
+  supports and get your documentation to look the way you want it to. We're
+  looking for any open source project interested in this and we're happy to let
+  your needs guide the next steps of development.
 
 ## How does it work?
 
