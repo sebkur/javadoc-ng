@@ -46,7 +46,8 @@ they are written to be compatible with the still
 popular Java 8 and hence use the old JDK8's javadoc tool chain for generating
 their documentation.
 Often you find yourself clicking into the "All Classes" frame and using the
-browser's own search feature to locate a class.
+browser's own search feature to locate a class – or head back to Google and use
+that to find the class you're looking for.
 
 While many things can be criticized in terms of UI and UX, I think one
 important point is that Javadocs cannot be easily integrated seamlessly
