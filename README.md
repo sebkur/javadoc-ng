@@ -238,7 +238,7 @@ Here's a list of options:
 
 * `--title`: the title to display in the top left corner of the navigation bar
 * `--color`: e.g. '#b93221', a color to use for the header and footer
-* `--dark`: specify this option if you're using a dar color above. It will turn
+* `--dark`: specify this option if you're using a dark color above. It will turn
   the color of the font used in header and footer from black to white
 * `--classic`: a base URL to use for the `Classic` link available on types to
   link back to the original documentation. E.g. use
