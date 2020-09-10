@@ -26,10 +26,10 @@ for some examples there.
 If you want to try it out with your own code or a library of your choice, jump
 right to the [usage section](#how-does-it-work).
 
-![Image of Guava docs](images/guava-multiset.png)
-![Splitter source code](images/splitter-source.png)
-![Guava search](images/guava-search.png)
-![JTS Coordinate](images/jts-coordinate.png)
+[![Image of Guava docs](images/guava-multiset.png)](https://javadocng.mobanisto.com/guava-29.0/com/google/common/collect/Multiset.html)
+[![Splitter source code](images/splitter-source.png)](https://javadocng.mobanisto.com/guava-29.0/src-html/com/google/common/base/Splitter.html)
+[![Guava search](images/guava-search.png)](https://javadocng.mobanisto.com/guava-29.0/search?q=spitter)
+[![JTS Coordinate](images/jts-coordinate.png)](https://javadocng.mobanisto.com/jts-1.17.1/org/locationtech/jts/geom/Coordinate.html)
 
 ## What's the problem with the old javadoc?
 
