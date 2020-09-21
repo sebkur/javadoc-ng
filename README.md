@@ -164,7 +164,7 @@ varying sizes.
 ### Prerequisites
 
 First download
-[javadoc-ng-0.0.1.jar](https://github.com/sebkur/javadoc-ng/releases/download/v0.0.1/javadoc-ng-0.0.1.jar).
+[javadoc-ng-0.0.2.jar](https://github.com/sebkur/javadoc-ng/releases/download/v0.0.2/javadoc-ng-0.0.2.jar).
 
 You'll need Java 9 or later to execute the Jar file, I have tested with Java 11.
 
@@ -174,7 +174,7 @@ Assuming you have downloaded a [Guava source
 jar](https://repo1.maven.org/maven2/com/google/guava/guava/29.0-jre/guava-29.0-jre-sources.jar)
 to `/tmp/guava.jar`, then you can run:
 
-    java -jar javadoc-ng-0.0.1.jar run-server \
+    java -jar javadoc-ng-0.0.2.jar run-server \
         --input /tmp/guava.jar --title "Guava 29.0"
 
 After parsing the source files contained in the Jar file, this output should
@@ -189,19 +189,19 @@ If you have a project on your disk just point the tool to a directory instead of
 a jar file and it will pick up all `*.java` files recursively and build the
 documentation for that:
 
-    java -jar javadoc-ng-0.0.1.jar run-server \
+    java -jar javadoc-ng-0.0.2.jar run-server \
         --input /tmp/guava --title "Guava 29.0"
 
 Even better, you can just pass a Maven coordinate to the tool and let it fetch
 the Jar artifact for you:
 
-    java -jar javadoc-ng-0.0.1.jar run-server \
+    java -jar javadoc-ng-0.0.2.jar run-server \
         --coordinates com.google.guava:guava:29.0-jre \
         --title "Guava 29.0"
 
 You can pass a `--port` argument to start the server on a different port:
 
-    java -jar javadoc-ng-0.0.1.jar run-server \
+    java -jar javadoc-ng-0.0.2.jar run-server \
         --input /tmp/guava --title "Guava 29.0" \
         --port 9000
 
@@ -209,7 +209,7 @@ You can pass a `--port` argument to start the server on a different port:
 
 You can create a WAR archive for deployment on an application server like this:
 
-    java -jar javadoc-ng-0.0.1.jar create-war \
+    java -jar javadoc-ng-0.0.2.jar create-war \
         --input /tmp/guava.jar --title "Guava 29.0" \
         --output /tmp/guava.war
 
@@ -229,7 +229,7 @@ too:
 As with the `run-server` task, you can specify a directory or a Maven coordinate
 instead of jar file as input:
 
-    java -jar javadoc-ng-0.0.1.jar create-war \
+    java -jar javadoc-ng-0.0.2.jar create-war \
         --coordinates com.google.guava:guava:29.0-jre \
         --title "Guava 29.0"
 
