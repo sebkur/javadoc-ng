@@ -250,3 +250,7 @@ Here's a list of options:
   'https://guava.dev/releases/29.0-jre/api/docs/' for Guava.
 * `--external`: use this (multiple times) to specify additional JAR files to use
   for resolving types and members of dependencies of your project or library
+* `--package-groups`: a package grouping configuration file. See
+  [jts.xml](jts.xml) for an example of the format and see
+  [here](https://javadocng.mobanisto.com/jts-1.17.1/packages.html) for the
+  effect.

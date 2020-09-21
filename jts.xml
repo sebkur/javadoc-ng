@@ -1,0 +1,22 @@
+<groups>
+    <group>
+        <title>Core - Geometry</title>
+        <packages>org.locationtech.jts.geom:org.locationtech.jts.geom.*</packages>
+    </group>
+    <group>
+        <title>Core - I/O</title>
+        <packages>org.locationtech.jts.io</packages>
+    </group>
+    <group>
+        <title>Core - Algorithms</title>
+        <packages>org.locationtech.jts.algorithm:org.locationtech.jts.algorithm.*:org.locationtech.jts.densify:org.locationtech.jts.dissolve:org.locationtech.jts.linearref:org.locationtech.jts.operation.*:org.locationtech.jts.simplify:org.locationtech.jts.triangulate</packages>
+    </group>
+    <group>
+        <title>Core - Other</title>
+        <packages>org.locationtech.jts:org.locationtech.jts.*</packages>
+    </group>
+    <group>
+        <title>I/O - Common</title>
+        <packages>org.locationtech.jts.io.*</packages>
+    </group>
+</groups>
