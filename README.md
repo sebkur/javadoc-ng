@@ -1,6 +1,6 @@
 # Javadoc-NG – javadoc rewritten from scratch
 
-The classic javadoc tool has been written in the 90's. Many things
+The classic javadoc tool has been written in the '90s. Many things
 have changed since then, but javadoc and the sites it generates are
 still a bit old-fashioned.
 
@@ -13,14 +13,14 @@ integrate seamlessly with other parts of a project's documentation.
 
 See [Multiset](https://javadocng.mobanisto.com/guava-29.0/com/google/common/collect/Multiset.html)
 or [Splitter](https://javadocng.mobanisto.com/guava-29.0/com/google/common/base/Splitter.html)
-from Google's Guava; also see the [package
+from Google's Guava; see the [package
 index](https://javadocng.mobanisto.com/guava-29.0/packages.html) and also try
 the [search
 functionality](https://javadocng.mobanisto.com/guava-29.0/search?q=joiner).
 
 We've also uploaded a version of LocationTech's [JTS](https://javadocng.mobanisto.com/jts-1.17.1/),
 see [Coordinate](https://javadocng.mobanisto.com/jts-1.17.1/org/locationtech/jts/geom/Coordinate.html)
-or [KdTree](https://javadocng.mobanisto.com/jts-1.17.1/org/locationtech/jts/index/kdtree/KdTree.html)
+and [KdTree](https://javadocng.mobanisto.com/jts-1.17.1/org/locationtech/jts/index/kdtree/KdTree.html)
 for some examples there.
 
 If you want to try it out with your own code or a library of your choice, jump
@@ -33,9 +33,9 @@ right to the [usage section](#how-does-it-work).
 
 ## What's the problem with the old javadoc?
 
-It's a bit fuzzy, but using a Javadoc site just feels like going back
+It's a bit fuzzy, but using a javadoc site just feels like going back
 in time a few decades.
-For example many Javadoc deployments still use the good old frameset
+For example many javadoc deployments still use the good old frameset
 like the official [JDK8 docs](https://docs.oracle.com/javase/8/docs/api/) do.
 Starting with JDK9, the frameset [is
 gone](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html),
@@ -55,7 +55,7 @@ browser's own search feature to locate a class – or head back to Google and us
 that to find the class you're looking for.
 
 While many things can be criticized in terms of UI and UX, I think one
-important point is that Javadocs cannot be easily integrated seamlessly
+important point is that javadocs cannot be easily integrated seamlessly
 into a project's homepage.
 Many projects use a custom stylesheet to change some colors like the
 [Gradle docs](https://docs.gradle.org/current/javadoc/index.html) do, but
@@ -143,21 +143,22 @@ varying sizes.
 
 ## What do I gain by using javadoc-ng?
 
-* Get a modern, decent layout
-* Enable search for projects that don't have that feature enabled / still
+* A modern, decent layout
+* Search for projects that don't have that feature enabled / still
   use an old JDK's javadoc (pre Java 9)
-* Enable fuzzy search using ngrams, get results even with lazy typing
+* Fuzzy search using ngrams; results even with lazy typing
   (for example, search for [spitter](https://javadocng.mobanisto.com/guava-29.0/search?q=spitter)
   in Guava and still find Splitter)
-* Enable source code view for projects that do not enable that in their docs
+* Source code view for projects that do not enable it in their docs
 * Code highlighting in source code view (Compare
   [classic](https://guava.dev/releases/29.0-jre/api/docs/src-html/com/google/common/base/Splitter.html)
   to
   [javadoc-ng](https://javadocng.mobanisto.com/guava-29.0/src-html/com/google/common/base/Splitter.html))
-* The development has really just begun, so you can shape the features it
-  supports and get your documentation to look the way you want it to. We're
-  looking for any open source project interested in this and we're happy to let
-  your needs guide the next steps of development.
+
+The development has really just begun, so you can shape the features it
+supports and get your documentation to look the way you want it to. We're
+looking for any open source project interested in this and we're happy to let
+your needs guide the next steps of development.
 
 ## How does it work?
 
@@ -166,7 +167,7 @@ varying sizes.
 First download
 [javadoc-ng-0.0.2.jar](https://github.com/sebkur/javadoc-ng/releases/download/v0.0.2/javadoc-ng-0.0.2.jar).
 
-You'll need Java 9 or later to execute the Jar file, I have tested with Java 11.
+You'll need Java 9 or later to execute the JAR file, I have tested with Java 11.
 
 ### Running a web server locally from the CLI
 
@@ -177,7 +178,7 @@ to `/tmp/guava.jar`, then you can run:
     java -jar javadoc-ng-0.0.2.jar run-server \
         --input /tmp/guava.jar --title "Guava 29.0"
 
-After parsing the source files contained in the Jar file, this output should
+After parsing the source files contained in the JAR file, this output should
 appear:
 
     Please visit http://localhost:8080
@@ -193,7 +194,7 @@ documentation for that:
         --input /tmp/guava --title "Guava 29.0"
 
 Even better, you can just pass a Maven coordinate to the tool and let it fetch
-the Jar artifact for you:
+the JAR artifact for you:
 
     java -jar javadoc-ng-0.0.2.jar run-server \
         --coordinates com.google.guava:guava:29.0-jre \
